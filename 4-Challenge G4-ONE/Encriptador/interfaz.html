@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encriptador y Desencriptador</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Encriptador y Desencriptador</h1>
+		<label for="input-text">Ingresa el texto a encriptar o desencriptar:</label>
+		<textarea id="input-text"></textarea>
+		<div>
+			<label for="encriptar">Encriptar</label>
+			<input type="radio" name="accion" id="encriptar" checked>
+			<label for="desencriptar">Desencriptar</label>
+			<input type="radio" name="accion" id="desencriptar">
+		</div>
+		<button id="submit-btn">Enviar</button>
+		<div class="result-container">
+			<label for="result-text">Texto resultante:</label>
+			<textarea id="result-text" readonly></textarea>
+			<button id="copy-btn">Copiar</button>
+		</div>
+	</div>
+	<script src="inte.js"></script>
+</body>
+</html>

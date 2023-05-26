@@ -1,0 +1,45 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+	function cuadrado(x,y,color){
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = color; //propiedad caracteristica
+	pincel.fillRect(x,y,50,50); //funcion
+	pincel.strokeStyle = "black";
+	pincel.strokeRect(x,y,50,50);
+	}
+
+/*		function cuadradoamarillo(x,y){
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "yellow"; //propiedad caracteristica
+	pincel.fillRect(x,y,50,50); //funcion
+	pincel.strokeStyle = "black";
+	pincel.strokeRect(x,y,50,50);
+	}
+
+		function cuadradorojo(x,y){
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "red"; //propiedad caracteristica
+	pincel.fillRect(x,y,50,50); //funcion
+	pincel.strokeStyle = "black";
+	pincel.strokeRect(x,y,50,50);
+	}*/
+
+	cuadrado(0,0,"red");
+	cuadrado(0,50,"yellow");
+	cuadrado(0,100,"green");
+
+
+	/*pincel.fillRect(50,0,50,50);
+	pincel.strokeRect(50,0,50,50);
+
+	pincel.fillRect(50,0,50,50);
+	pincel.strokeRect(50,0,50,50);*/
+
+</script>

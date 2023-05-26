@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+
+<h1> CALCULO DEL IMC </h1>
+
+<script>
+		function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarlinea();
+	}
+	
+	function calcularimc(peso,estatura){
+		imc=peso/(estatura*estatura);
+		return(imc);
+	}
+	pesoMiguel=80;
+	estaturaMiguel=1.80;
+	imcMiguel=calcularimc(pesoMiguel, estaturaMiguel);
+	imprimir("El IMC de Miguel es: "+imcMiguel);
+	//pesoMiguel=80;
+	//estaturaMiguel=1.80;
+	//imcMiguel=80/(estaturaMiguel*estaturaMiguel)
+	//imprimir("El IMC de Miguel es: "+imcMiguel);
+	function calcularIMC(peso,estatura, nombre){
+		imc=peso/(estatura*estatura);
+		imprimir("El IMC de "+nombre+" es: "+imc);
+	}
+	//pesomike=21;
+	//estaturamike=1.80;
+	calcularIMC(21, 1.80, "mike");
+</script>

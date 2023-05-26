@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+
+<h1> CALCULO DE AÑOS DEL MUNDIAL </h1>
+	
+<script>
+		function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarlinea();
+	};
+	
+	var numpersonas=parseInt(prompt("Ingrese el numero de personas"));
+	var contador=1;
+	var totalEdades=0;
+	while(contador<=numpersonas){
+		edad=parseInt(prompt("Ingrese la edad de la persona"));
+		totalEdades=totalEdades+edad;
+		contador++
+	}
+	mediaedades=totalEdades/numpersonas
+	imprimir("El promedio de edades es: "+mediaedades)
+	imprimir("Fin");
+
+</script>
+
+<script>
+		function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarlinea();
+	};
+	imprimir("NUMEROS DEL 1-100");
+	var contador=2;
+	while(contador<=100){
+		imprimir(contador);
+		contador=contador+2;
+	}
+	imprimir("Fin");
+
+</script>

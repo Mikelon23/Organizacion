@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+
+<h1> ADIVINANZA </h1>
+
+<script>
+	function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarlinea();
+	};
+//	var numerocorrecto=5;
+	var numerocorrecto=Math.round(Math.random()*10);
+	var numerolanzado=parseInt(prompt("Ingrese el numero en 0-10"));
+
+	if (numerocorrecto==numerolanzado) {
+		imprimir("Usted acerto");
+	}
+	else {
+		imprimir("Incorrecto el valor correcto era: "+numerocorrecto);
+	};
+
+</script>

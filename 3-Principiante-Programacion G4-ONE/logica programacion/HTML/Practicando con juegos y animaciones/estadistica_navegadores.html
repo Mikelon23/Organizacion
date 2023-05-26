@@ -1,0 +1,53 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function dibujarRectangulo(x, y, base, altura, color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle=color;
+        pincel.fillRect(x,y, base, altura);
+        pincel.strokeStyle="black";
+        pincel.strokeRect(x,y, base, altura);
+    }
+
+    function escribirTexto(x , y, texto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.font="15px Georgia";
+        pincel.fillStyle="black";
+        pincel.fillText(texto, x, y);    
+    }
+
+    //En el mundo de gráficos los valores son llamados de series: 
+    var serie2009 = [6, 47, 41, 3, 3];
+    var serie2019 = [81, 9, 3, 3, 4];
+    //crear otro array con los colores usados en el gráfico: 
+    var colores = ["blue","green","yellow", "red","gray"];
+    
+    //escribe una función dibujarBarra que cree una barra (5 rectángulos, 
+    //el primero azul, el segundo verde, etc., igual al gráfico de arriba)
+    function dibujarBarra(x, y, serie, colores, texto) {
+        escribirTexto(x, y - 10, texto);
+        //declaramos antes una variable para luego acumular las alturas dentro del Loop.
+        var sumaAltura = 0; //variable auxiliar
+       for (var i = 0; i < serie.length; i++) {
+            //Dentro del Loop vamos a capturar los valores de la serie usando el índice. 
+        //Ese valor representa la altura de los rectángulos.
+            var altura = serie[i];
+            //Y ahora podemos dibujar un rectángulo con nuestra función dibujarRectangulo.
+            dibujarRectangulo(x, y + sumaAltura, 50, altura, colores[i]);
+            //Estamos usando las variables sumaAltura y Altura. Al final, no podemos olvidar de sumar las alturas: 
+            sumaAltura = sumaAltura + altura;
+        };
+    };
+    //ahora, basta llamar a la función pasando las coordenadas iniciales, la serie, los colores y el texto. 
+    var colores = ["blue","green","yellow", "red","gray"];
+    var serie2009 = [6,47,41,3,3];
+    var serie2019 = [81,9,3,3,4];
+
+    dibujarBarra(50, 50, serie2009, colores, "2009");
+    dibujarBarra(150, 50, serie2019, colores, "2019");
+</script>

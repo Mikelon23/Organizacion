@@ -1,0 +1,19 @@
+.banner__imagen{
+    width: 100%;
+    background: url('../../img/banner.png') no-repeat center / cover;
+    /*background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;*/
+}
+
+@media screen and (min-width: 0) {
+    .banner__imagen{
+        height: calc(100vh - 50px);
+    }    
+}
+
+@media screen and (min-width: 768px) {
+    .banner__imagen{
+        height: calc(100vh - 72px);       
+    }
+}

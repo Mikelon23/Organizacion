@@ -1,0 +1,50 @@
+<canvas width = "600", height = "400"> </canvas>
+<script>
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+	pincel.fillStyle = "lightgrey";
+	pincel.fillRect(0,0,600,400);
+
+	function disenharcircunf(x,y,radio){
+		pincel.fillStyle = "blue";
+		pincel.beginPath();
+		pincel.arc(x,y,radio,0,2*Math.PI);
+		pincel.fill();
+	};
+	//disenharcircunf(20,20,10);
+
+	function borrarpantalla(){
+		pincel.clearRect(0,0,600,400);
+	};
+
+	/*for (var i = 20; i < 600; i++) {
+		borrarpantalla();
+		disenharcircunf(i,20,10);	
+	};
+	function mostrarsms(){
+		console.log("mostar sms");
+	};
+	setInterval(mostrarsms,5);
+	setInterval(disenharcircunf(20,20,10),100);*/
+	var x = 0;
+	//creamos una vriable para determinar el sentido
+	var sentido = 1;
+	function actualizarmovimiento(){
+		borrarpantalla();
+		//creamos una condicion para verificar si 
+		//debemos alterar el valor del sentido
+		if (x > 600) {
+			sentido = -1;
+		}else if (x < 0) {
+			sentido = 1;
+		}
+		disenharcircunf(x,20,10);
+		//usamos el valor de la variable "sentido" para realizar el incremento
+		x = x + sentido;
+		//x++;
+	};
+	setInterval(actualizarmovimiento,2);
+	/*cuando su posición X sea superior a 600, 
+	necesitamos invertir su sentido y viceversa*/
+
+</script>

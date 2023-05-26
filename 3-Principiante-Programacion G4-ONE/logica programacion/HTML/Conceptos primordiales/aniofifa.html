@@ -1,0 +1,63 @@
+<meta charset="utf-8">
+
+<h1> CALCULO DE AÑOS DEL MUNDIAL </h1>
+	
+<script>
+		function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarlinea();
+	};
+	var aniomundial=1930;
+	//alert("Hubo mundial de la fifa en el año: "+aniomundial);
+	var limite=parseInt(prompt("Ingrese el año para calcular"));
+	while(aniomundial<=limite){
+		//alert("Hubo mundial de la fifa en el año: "+aniomundial);
+		imprimir("Hubo mundial de la fifa en el año: "+aniomundial);
+		aniomundial=aniomundial+4;
+	}
+	//alert("Fin");
+	imprimir("Fin");
+
+</script>
+
+<script>
+
+    // funciones omitidas saltarLinea, imprimir, sortearNumero
+    function saltarLinea() {
+
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function sortearNumero() {
+
+        return Math.round(Math.random() * 100);
+    }   
+
+    var numeroPensado = sortearNumero();
+
+    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10: "));
+
+    if(numeroLanzado  == numeroPensado) {
+
+        imprimir("Uau! Vos acertaste, pues yo pensé en el número " + numeroPensado);
+    } else {
+        var contador = 1;
+
+        while(contador <= 10) {
+
+               imprimir("¡Se acabó, vos erraste!");
+               contador = contador +1;
+        }
+    }
+</script>

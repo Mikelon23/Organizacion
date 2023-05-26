@@ -1,0 +1,79 @@
+<meta charset="utf-8">
+
+<h1> ADIVINANZA </h1>
+
+<script>
+	function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarlinea();
+	};
+	var numerocorrecto=Math.round(Math.random()*10);
+	var intentos=3;
+	var contador=1;
+
+	while(contador<=intentos){
+		var numerolanzado=parseInt(prompt("Ingrese el numero en 0-10"));
+		if (numerocorrecto==numerolanzado) {
+			//alert("Usted acerto");
+			alert("Usted acerto en el intento "+contador+" el numero pensado era "+numerocorrecto);
+			break;
+		}
+		else {
+			//alert("Incorrecto el valor correcto era: "+numerocorrecto);
+			alert("Incorrecto el valor correcto era: "+numerocorrecto);
+
+		}
+		contador++;
+	};
+	imprimir("Fin");	
+	if (numerocorrecto==numerolanzado) {
+			//alert("Usted acerto");
+			imprimir("Usted acerto en el intento "+contador+" el numero pensado era "+numerocorrecto);
+		}
+		else {
+			//alert("Incorrecto el valor correcto era: "+numerocorrecto);
+			imprimir("Incorrecto el valor correcto era: "+numerocorrecto);
+
+		}
+</script>
+
+<script>
+/    ///function saltarLinea() {
+        //document.write("<br>");    
+        //document.write("<br>");    
+      //  document.write("<br>");    
+    //}  
+    //function imprimir(frase) {
+        //document.write(frase);
+      //  saltarLinea();
+    //}
+    //var numeroPensado = Math.round(Math.random()*10);
+    //var intentos = 3;
+    //var contador = 1;
+
+    //while (contador <= intentos) {
+        //var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"));
+        //if (numeroPensado == numeroLanzado){
+            //corregir aquí
+        //    alert("usted acertó, en el intento " + contador + " el número pensado era " + numeroPensado);
+      //      break;
+        //}
+        //else {
+        //    alert("usted erró");
+        //}
+       // contador++;
+    //}
+    //if (numeroPensado == numeroLanzado){
+        //corregir aquí
+     //   imprimir("usted acertó, en el intento " + contador + " el número pensado era " + numeroPensado);
+    //}
+    //else {
+      //  imprimir("usted erró, el número pensado era " + numeroPensado);
+    //}
+    //imprimir("fin");
+</script> 

@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+
+<h1> CALCULO DE INGRESO POR APUESTA </h1>
+	
+<script>
+		function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarlinea();
+	};
+	//var victorias=prompt("Ingrese cantidad de victorias");
+	var victorias=parseInt(prompt("Ingrese cantidad de victorias"));
+	//var empates=prompt("Ingrese cantidad de empates");
+	var empates=parseInt(prompt("Ingrese cantidad de empates"));
+
+	//texto*numero=numero
+	//"10"*2=20
+	//"10"+20=1020
+	puntos_total=victorias*3+empates;
+	imprimir("El total de punntos es: "+puntos_total);
+	//imprimir(("10"*2));
+	//imprimir(("10"+20));
+
+	if (puntos_total>28){
+	    imprimir("El equipo esta mejor que el año pasado");
+	}
+
+	if(puntos_total<28){
+    	imprimir("El equipo esta peor que el año pasado");
+	}
+
+	if(puntos_total==28){
+	    imprimir("El equipo esta igual que el año pasado");
+	}
+
+</script>
+
+//<script>
+  /  function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var invitados = parseInt(prompt("Número de invitados"));
+    var vips = parseInt(prompt("Número de invitados VIP's"));
+
+    var total = invitados + vips;
+
+    imprimir("El total de invitados es " + total);
+
+//</script>

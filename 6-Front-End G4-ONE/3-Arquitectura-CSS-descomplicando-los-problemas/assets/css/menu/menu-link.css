@@ -1,0 +1,16 @@
+.menu__link{
+    margin-right: 1.25rem;
+    text-decoration:none;
+    color: gray;
+}
+.menu__link:hover{
+    text-decoration: underline;
+}
+.menu__link--activo:hover{
+    text-decoration: underline;
+}
+.menu__link--activo{
+    margin-right: 1.25rem;
+    text-decoration:none;
+    color: black;
+}

@@ -1,0 +1,72 @@
+<meta charset="utf-8">
+
+<h1> CALCULO DEL IMC </h1>
+
+<script>
+	function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarlinea();
+	};
+	function calcularimc(peso,estatura){
+		return (peso/(estatura*estatura));
+	};
+	nombrex=prompt("Ingrese su nombre");
+	
+	pesox=prompt(nombrex+", Ingrese su peso");
+	
+	estaturax=prompt(nombrex+", Ingrese su estatura");
+	
+	imcx=calcularimc(pesox,estaturax);
+	
+	imprimir(nombrex+" su imc es: "+imcx);
+
+	if (imcx<18.5) {
+
+		imprimir("IMC abajo de lo recomendado");
+
+	};
+
+	if (imcx>=18.5) {
+
+		if (imcx<25) {
+			imprimir("IMC dentro del intervalo normal");
+		}
+	};
+
+	if (imcx>=25) {
+
+		if (imcx<30) {
+			imprimir("IMC hay sobrepeso");
+		}
+	};
+
+		if (imcx<18.5) {
+
+		imprimir("IMC es obeso");
+
+	};
+	
+</script>
+
+<script>
+  /  function saltarLinea() {
+
+        document.write("<br>");
+    }
+
+    function mostrar(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numero1 = prompt("Digite el primer número");
+    var numero2 = prompt("Digite el segundo número");
+
+    mostrar("El valor de " + numero1 + " veces " + numero2 + " es: " + (numero1 * numero2));
+
+</script>

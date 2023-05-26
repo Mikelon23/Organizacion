@@ -1,0 +1,41 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function escribiralert(evento){
+        //creamos un parametro "evento" para saber la ubicacion del clic.
+        console.log(evento);
+        //para conseguir la posicion x. y, page da las coordenadas de toda la pagina
+        // pantalla.offsetLeft-Top para restar los espacios de la pantalla
+        var x = evento.pageX  - pantalla.offsetLeft
+        var y = evento.pageY - pantalla.offsetTop
+        //alert("usted hizo un clic");
+        alert(x+" , "+y);
+    };
+    function dibujarcirculo(evento){
+        //para conseguir la posicion x. y, page da las coordenadas de toda la pagina
+        // pantalla.offsetLeft-Top para restar los espacios de la pantalla
+        var x = evento.pageX  - pantalla.offsetLeft
+        var y = evento.pageY - pantalla.offsetTop
+
+        pincel.fillStyle = "blue";
+        //inicia el camino para dibujar el circulo
+        pincel.beginPath();
+        //radio = 10, angulo inicial = 0, angulo final = 2*3.14
+        pincel.arc(x,y,10,0,2*3.14);
+        //llamamos al parametro para que aparezca
+        pincel.fill();
+        console.log(x+" , "+y);
+    };
+    //se llama a la funcion
+    //escribiralert();
+    //la funcion se almacena en este parametro pero sin parentes, pues daria el mismo resultado anterior.
+    //la llamada de la funcion no necesita especificar el parametro
+    //pantalla.onclick = escribiralert;
+    pantalla.onclick = dibujarcirculo;
+</script>

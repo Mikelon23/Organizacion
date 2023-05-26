@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "bucles",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\6-Front-End G4-ONE\\4-Javascript-primeros-pasos-con-el-lenguaje\\bucles.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "condicionales",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\6-Front-End G4-ONE\\4-Javascript-primeros-pasos-con-el-lenguaje\\condicionales.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "bucle-for",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\6-Front-End G4-ONE\\4-Javascript-primeros-pasos-con-el-lenguaje\\bucle-for.js"
+        }
+    ]
+}

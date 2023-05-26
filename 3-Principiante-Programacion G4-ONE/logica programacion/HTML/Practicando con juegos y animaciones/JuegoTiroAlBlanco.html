@@ -1,0 +1,55 @@
+<canvas width = "600", height = "400"> </canvas>
+<script>
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+	pincel.fillStyle = "lightgrey";
+	pincel.fillRect(0,0,600,400);
+
+	var radio = 10;
+	var xAleatorio;
+	var yAleatorio;
+	function disenharcircunf(x,y,radio, color){
+		pincel.fillStyle = color;
+		pincel.beginPath();
+		pincel.arc(x,y,radio,0,2*Math.PI);
+		pincel.fill();
+	};
+
+	function borrarpantalla(){
+		pincel.clearRect(0,0,600,400);
+	};
+	function disenharobjetivo(x,y){
+		disenharcircunf(x,y,radio+20,"red")
+		disenharcircunf(x,y,radio+10,"white")
+		disenharcircunf(x,y,radio,"red")
+	};
+	/*disenharcircunf(100,100,radio+20,"red")
+	disenharcircunf(100,100,radio+10,"white")
+	disenharcircunf(100,100,radio,"red")*/
+	/*xAleatorio = 50; 
+	yAleatorio = 100;
+	disenharobjetivo(xAleatorio,yAleatorio);*/
+	function sortearposicion(maximo){
+		//floor permite redondear numeros decimales
+		return Math.floor(Math.random()*maximo)
+	};
+	function actualizarmovimiento(){
+		borrarpantalla();
+		xAleatorio = sortearposicion(600);
+		yAleatorio = sortearposicion(400);
+		disenharobjetivo(xAleatorio,yAleatorio);
+		x++;
+	};
+	setInterval(actualizarmovimiento,1000);
+	function disparoalblanco(evento){
+		var x = evento.pageX - pantalla.offsetLeft;
+		var y = evento.pageY - pantalla.offsetTop;
+		if ((x < xAleatorio + radio)&&
+			(x > xAleatorio - radio)&&
+			(y < yAleatorio + radio)&&
+			(y > yAleatorio - radio)) {
+			alert("Tiro al blanco");
+		}
+	};
+	pantalla.onclick = disparoalblanco;
+</script>

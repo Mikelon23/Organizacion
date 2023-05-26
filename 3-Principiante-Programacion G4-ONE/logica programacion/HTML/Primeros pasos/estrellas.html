@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+
+<h1> ESTRELLAS </h1>
+
+<script>
+	function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarlinea();
+	};
+	
+	for (var saltarlin=1; saltarlin<=3; saltarlin++){
+		for (var columna=1;columna<=10;columna++){
+			document.write("*");
+		}
+		saltarlinea();
+	}
+	imprimir("Fin");
+</script>

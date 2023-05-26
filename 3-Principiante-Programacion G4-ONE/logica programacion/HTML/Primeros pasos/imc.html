@@ -1,0 +1,114 @@
+<meta charset="utf-8">
+
+<h1> CALCULO DEL IMC </h1>
+	
+<script>
+		function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function imprimir(frase){
+		document.write(frase);
+		saltarlinea();
+	};
+	
+	function calcularimc(peso,estatura, peso2, estatura2){
+		imc=peso/(estatura*estatura);
+		imc2=peso2/(estatura2*estatura2);
+		imprimir("El IMC de Miguel es: "+(imc+imc2)/2);
+	};
+	calcularimc(21, 1.80, 32, 1.78);
+</script>
+
+<script>
+	function calcularimc(peso,estatura){
+		imc=peso/(estatura*estatura);
+		return imc;
+	};
+	var imcMiguel=calcularimc(21, 1.80);
+	var imcMike=calcularimc(43, 1.78);
+	imprimir("El promedio del imc es: "+(imcMiguel+imcMike)/2)
+</script>
+
+<script>
+	function calcularimc(peso,estatura){
+		return (peso/(estatura*estatura));
+	};
+	imprimir("El promedio del imc es: "+(calcularimc(54, 1.82)+calcularimc(32, 1.70))/2)
+</script>
+
+<meta charset="UTF-8">
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function sumarDosNumeros(numero1, numero2) {
+        imprimir("La suma de los dos números es : " + (numero1 + numero2) );
+    }
+
+    sumarDosNumeros(10, 40);
+</script>
+
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+
+        document.write("<br>");
+    }
+
+    function mostrar(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function a(numero1, numero2) {
+        return numero1 + numero2;
+    }
+
+    function b(numero1, numero2) {
+        return numero1 / numero2;
+    }
+
+    var resultado = a(10,20) + b(30,2);
+
+    mostrar(resultado);
+</script>
+
+<script>
+	function calcularimc(peso,estatura){
+		return (peso/(estatura*estatura));
+	};
+	nombrex=prompt("Ingrese su nombre");
+	pesox=prompt(nombrex+", Ingrese su peso");
+	estaturax=prompt(nombrex+", Ingrese su estatura");
+	imcx=calcularimc(pesox,estaturax);
+	imprimir(nombrex+" su imc es: "+imcx);
+</script>
+
+<script>
+    function saltarLinea() {
+
+        document.write("<br>");
+    }
+
+    function mostrar(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numero1 = prompt("Digite el primer número");
+    var numero2 = prompt("Digite el segundo número");
+
+    mostrar("El valor de " + numero1 + " veces " + numero2 + " es: " + (numero1 * numero2));
+
+</script>

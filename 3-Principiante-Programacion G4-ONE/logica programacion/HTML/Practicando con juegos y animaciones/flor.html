@@ -1,0 +1,51 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function dibujarCirculo(x, y, radio, color) {
+
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2*3.14);
+        pincel.fill();
+    };  
+    
+/*    dibujarCirculo(300, 160, 20, "yellow");
+    dibujarCirculo(260, 200, 20, "orange");
+    dibujarCirculo(300, 200, 20, "red");
+    dibujarCirculo(300, 240, 20, "blue");
+    dibujarCirculo(340, 200, 20, "black");*/
+
+  /*  function dibujarflor(){
+        dibujarCirculo(300, 160, 20, "yellow");
+        dibujarCirculo(260, 200, 20, "orange");
+        dibujarCirculo(300, 200, 20, "red");
+        dibujarCirculo(300, 240, 20, "blue");
+        dibujarCirculo(340, 200, 20, "black");        
+    };
+    dibujarflor();*/
+//esta funcion permite cambiar el lugar o mover la flor, notara que y+20, y-20, x+20, x-20 hace que se muevan
+    //en conjunto con el circulo rojo o el centro de la flor.
+    function dibujarFlor(x,y) {
+    dibujarCirculo(x, y+20, 10, "blue");
+    dibujarCirculo(x, y, 10, "red");
+    dibujarCirculo(x, y-20, 10, "yellow");
+    dibujarCirculo(x-20, y, 10, "orange");
+    dibujarCirculo(x+20, y, 10, "black");
+  }
+ dibujarFlor(300,200);
+ dibujarFlor(400,100);
+
+/*
+    dibujarCirculo(300, 220, 10, "blue");
+    dibujarCirculo(300, 200, 10, "red");
+    dibujarCirculo(300, 180, 10, "yellow");
+    dibujarCirculo(280, 200, 10, "orange");
+    dibujarCirculo(320, 200, 10, "black");*/
+
+</script>
